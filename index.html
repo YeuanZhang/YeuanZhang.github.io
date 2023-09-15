@@ -255,33 +255,32 @@ url={https://openreview.net/forum?id=mWRngkvIki3}
 
 <h2>Publications</h2>
 *: equal contribution.<br>
-First-authored papers: <venue>CVPR</venue>x 4, <venue>NeurIPS</venue>x 1, <venue>ICLR</venue>x 2 <br><br>
+First-authored papers: <venue>ACM MM</venue>x 1, <venue>ICLR</venue>x 1, <venue>ICASSP</venue>x 1 <br><br>
 
 <button class="filter" type="button" onclick="filterPub('All')" style="--color: #000; --border: #000">All</button>&nbsp;
 <button class="filter" type="button" onclick="filterPub('First-authored')">First-authored</button>&nbsp;
 <button class="filter" type="button" onclick="filterPub('KD')">KD</button>&nbsp;
-<button class="filter" type="button" onclick="filterPub('NAS')">NAS</button>&nbsp;
-<button class="filter" type="button" onclick="filterPub('Pruning')">Pruning</button>
 
 <ul id="publications">
-    <li category="KD">
+    <li first_authored=true category="KD">
         <venue>ACM MM</venue><pt>Avatar Knowledge Distillation: Self-ensemble Teacher Paradigm with Uncertainty</pt><br>
-        <g>Yuan Zhang, Weihua Chen, Yichen Lu,</g> <b>Tao Huang</b><g>, Xiuyu Sun, Jian Cao</g><br>
+        <b>Yuan Zhang</b><g>, Weihua Chen*, Yichen Lu*, Tao Huang, Xiuyu Sun, Jian Cao</g><br>
         <em>Proceedings of the 31th ACM International Conference on Multimedia</em> (<b>ACM MM</b>), 2023.
         <p>
-            <a href="https://arxiv.org/abs/2305.02722" class="button-59">ArXiv</a>
-            <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=9322121606680381236" class="button-59">Bib</a>
+		<a href="https://arxiv.org/abs/2305.02722" class="button-59">ArXiv</a>
+		<a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=9322121606680381236" class="button-59">Bib</a>
+		<a class="button-59" href="https://github.com/Gumpest/AvatarKD">Code</a>
         </p>
     </li>
     <li first_authored=true category="KD">
-		<venue>ICLR</venue><pt>Masked Distillation with Receptive Tokens</pt><br>
-		<b>Tao Huang</b>*<g>, Yuan Zhang*, Shan You, Fei Wang, Chen Qian, Jian Cao, Chang Xu</g><br>
-		<em>International Conference on Learning Representations</em> (<b>ICLR</b>), 2023.</em>
-		<p>
-			<a class="button-59" href="https://arxiv.org/abs/2205.14589">ArXiv</a>
-            <button class="button-59" onclick="getBibTex('huang2023masked')">Bib</button>
-            <a class="button-59" href="https://github.com/hunto/MasKD">Code</a>
-		</p>
+	<venue>ICLR</venue><pt>Masked Distillation with Receptive Tokens</pt><br>
+	<g>Tao Huang*,</g> <b>Yuan Zhang*</b><g>, Shan You, Fei Wang, Chen Qian, Jian Cao, Chang Xu</g><br>
+	<em>International Conference on Learning Representations</em> (<b>ICLR</b>), 2023.</em>
+	<p>
+		<a class="button-59" href="https://arxiv.org/abs/2205.14589">ArXiv</a>
+		<button class="button-59" onclick="getBibTex('huang2023masked')">Bib</button>
+		<a class="button-59" href="https://github.com/hunto/MasKD">Code</a>
+	</p>
     </li>
     <li first_authored=true category="KD">
 		<venue>NeurIPS</venue><pt>Knowledge Distillation from A Stronger Teacher</pt><br>
