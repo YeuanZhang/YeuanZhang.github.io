@@ -125,6 +125,34 @@
   margin-bottom: 18px;     /* 控制段落间距 */
   font-size: 15px;         /* 可选：更接近她 */
   color: #555;             /* 可选：更柔和 */
+
+.pub-item {
+  margin-bottom: 28px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.pub-item:hover {
+  background: #f9fafc;
+}
+
+.pub-links {
+  margin-top: 6px;
+}
+
+.filter {
+  margin-right: 8px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.filter:hover {
+  background: #f0f0f0;
+}
 }
 
 </style>
@@ -223,70 +251,95 @@
 <section id="research_section" class="colorlib-experience" data-section="research">
   <div class="colorlib-narrow-content">
 
-    <!-- 标题（统一风格） -->
-    <span class="heading-meta">Research</span>
-    <h2 class="colorlib-heading">Selected Publications</h2>
+    <!-- 标题 -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 animate-box" data-animate-effect="fadeInLeft">
+        <h2 class="colorlib-heading">Selected Publications</h2>
 
-    <!-- summary -->
-    <p style="margin-top: -10px;">
-      First-author: 
-      <b>ICML</b> ×1, 
-      <b>NeurIPS</b> ×1, 
-      <b>CVPR</b> ×1, 
-      <b>ACM MM</b> ×1
-    </p>
+        <p>
+          First-author:
+          <venue>ICML</venue> × 1,
+          <venue>NeurIPS</venue> × 1,
+          <venue>CVPR</venue> × 1,
+          <venue>ACM MM</venue> × 1
+        </p>
 
-    <!-- filter -->
-    <div style="margin: 15px 0;">
-      <button class="filter" onclick="filterPub('All')">All</button>
-      <button class="filter" onclick="filterPub('First-authored')">First author</button>
-      <button class="filter" onclick="filterPub('KD')">KD</button>
-      <button class="filter" onclick="filterPub('VLM')">VLM</button>
+        <!-- filter -->
+        <button class="filter" onclick="filterPub('All')">All</button>
+        <button class="filter" onclick="filterPub('First-authored')">First author</button>
+        <button class="filter" onclick="filterPub('KD')">KD</button>
+        <button class="filter" onclick="filterPub('VLM')">VLM</button>
+      </div>
     </div>
 
-    <!-- publications -->
-    <ul id="publications" style="padding-left: 0; list-style: none;">
+    <!-- Publications -->
+    <div id="publications">
 
-      <li class="pub-item" first_authored="true" category="VLM">
-        <p>
-          <b>SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference</b><br>
-          <b>Yuan Zhang</b>, ChunKai Fan, Junpeng Ma, ... Shanghang Zhang<br>
-          <em>ICML 2025</em>
-        </p>
-        <p>
-          <a href="https://arxiv.org/pdf/2410.04417">[PDF]</a>
-          <a href="https://github.com/Gumpest/SparseVLMs">[Code]</a>
-        </p>
-      </li>
+      <!-- Paper -->
+      <div class="pub-item animate-box"
+           data-animate-effect="fadeInUp"
+           data-category="VLM First-authored">
 
-      <li class="pub-item" first_authored="true" category="VLM">
-        <p>
-          <b>Unveiling the Tapestry of Consistency in Large Vision-Language Models</b><br>
-          <b>Yuan Zhang</b>, Fei Xiao, ... Shanghang Zhang<br>
-          <em>NeurIPS 2024</em>
-        </p>
-        <p>
-          <a href="https://arxiv.org/abs/2405.14156">[PDF]</a>
-          <a href="https://github.com/foundation-multimodal-models/ConBench">[Code]</a>
-        </p>
-      </li>
+        <strong>SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference</strong><br>
 
-      <!-- 你其他论文照这个格式继续贴 -->
+        <b>Yuan Zhang</b>,
+        ChunKai Fan, Junpeng Ma,
+        <span class="more-authors"
+              data-short="7 more authors"
+              data-full="Wenzhao Zheng, Tao Huang, Kuan Cheng, Denis Gudovskiy, Tomoyuki Okuno, Yohei Nakata, Kurt Keutzer"
+              onclick="toggleAuthors(this)">
+          7 more authors
+        </span>,
+        Shanghang Zhang
 
-    </ul>
+        <br>
+        <em>ICML 2025</em>
+
+        <div class="pub-links">
+          <a href="#" class="btn btn-primary btn-sm">PDF</a>
+          <a href="#" class="btn btn-primary btn-sm">Code</a>
+        </div>
+      </div>
+
+      <!-- Paper -->
+      <div class="pub-item animate-box"
+           data-animate-effect="fadeInUp"
+           data-category="VLM First-authored">
+
+        <strong>Unveiling the Tapestry of Consistency in Large Vision-Language Models</strong><br>
+
+        <b>Yuan Zhang</b>, Fei Xiao, Tao Huang,
+        <span class="more-authors"
+              data-short="6 more authors"
+              data-full="Chunkai Fan, Hongyuan Dong, Jiawen Li, Jiacong Wang, Kuan Cheng, Shanghang Zhang"
+              onclick="toggleAuthors(this)">
+          6 more authors
+        </span>,
+        Haoyuan Guo
+
+        <br>
+        <em>NeurIPS 2024</em>
+
+        <div class="pub-links">
+          <a href="#" class="btn btn-primary btn-sm">PDF</a>
+          <a href="#" class="btn btn-primary btn-sm">Code</a>
+        </div>
+      </div>
+
+    </div>
 
     <!-- Manuscripts -->
-    <h2 class="colorlib-heading" style="margin-top: 40px;">Manuscripts</h2>
+    <div class="row" style="margin-top:40px;">
+      <div class="col-md-10 col-md-offset-1 animate-box">
+        <h2 class="colorlib-heading">Manuscripts</h2>
+      </div>
+    </div>
 
-    <ul style="padding-left: 0; list-style: none;">
-      <li class="pub-item">
-        <p>
-          <b>SparseVLM+: Visual Token Sparsification with Improved Text-Visual Attention Pattern</b><br>
-          <b>Yuan Zhang</b>, ... Shanghang Zhang<br>
-          <em>Preprint, 2025</em>
-        </p>
-      </li>
-    </ul>
+    <div class="pub-item animate-box" data-animate-effect="fadeInUp">
+      <strong>ChainV: Atomic Visual Hints Make Multimodal Reasoning Shorter and Better</strong><br>
+      <b>Yuan Zhang</b>, Ming Lu, et al.<br>
+      <em>arXiv 2025</em>
+    </div>
 
   </div>
 </section>
@@ -467,6 +520,35 @@ You can check out some of my paintings and photography down below! </p>
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+<!-- 你的页面内容 -->
+
+<script>
+function filterPub(category) {
+  let pubs = document.getElementsByClassName("pub-item");
+
+  for (let i = 0; i < pubs.length; i++) {
+    let cat = pubs[i].getAttribute("data-category") || "";
+
+    if (category === "All" || cat.includes(category)) {
+      pubs[i].style.display = "block";
+    } else {
+      pubs[i].style.display = "none";
+    }
+  }
+}
+
+function toggleAuthors(el) {
+  let expanded = el.getAttribute("data-expanded") === "true";
+
+  if (!expanded) {
+    el.innerText = el.getAttribute("data-full");
+    el.setAttribute("data-expanded", "true");
+  } else {
+    el.innerText = el.getAttribute("data-short");
+    el.setAttribute("data-expanded", "false");
+  }
+}
+</script>
 	</body>
 </html>
 
