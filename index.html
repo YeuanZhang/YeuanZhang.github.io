@@ -247,102 +247,81 @@
 
 </div>
 
-
 <section id="research_section" class="colorlib-experience" data-section="research">
   <div class="colorlib-narrow-content">
 
-    <!-- 标题 -->
+    <!-- 标题（完全对齐原模板） -->
     <div class="row">
-      <div class="col-md-10 col-md-offset-1 animate-box" data-animate-effect="fadeInLeft">
+      <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+        <span class="heading-meta">Research</span>
         <h2 class="colorlib-heading">Selected Publications</h2>
-
         <p>
-          First-author:
-          <venue>ICML</venue> × 1,
-          <venue>NeurIPS</venue> × 1,
-          <venue>CVPR</venue> × 1,
-          <venue>ACM MM</venue> × 1
+          First-author: ICML × 1, NeurIPS × 1, CVPR × 1, ACM MM × 1
         </p>
-
-        <!-- filter -->
-        <button class="filter" onclick="filterPub('All')">All</button>
-        <button class="filter" onclick="filterPub('First-authored')">First author</button>
-        <button class="filter" onclick="filterPub('KD')">KD</button>
-        <button class="filter" onclick="filterPub('VLM')">VLM</button>
       </div>
     </div>
 
-    <!-- Publications -->
-    <div id="publications">
+    <!-- Paper 1 -->
+    <div class="row">
+      <div class="col-md-12">
+        <article class="timeline-entry animate-box" data-animate-effect="fadeInUp">
 
-      <!-- Paper -->
-      <div class="pub-item animate-box"
-           data-animate-effect="fadeInUp"
-           data-category="VLM First-authored">
+          <strong>SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference</strong><br>
 
-        <strong>SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference</strong><br>
+          <b>Yuan Zhang</b>, ChunKai Fan, Junpeng Ma,
+          <span class="more-authors"
+                data-short="7 more authors"
+                data-full="Wenzhao Zheng, Tao Huang, Kuan Cheng, Denis Gudovskiy, Tomoyuki Okuno, Yohei Nakata, Kurt Keutzer"
+                onclick="toggleAuthors(this)"
+                style="cursor:pointer; color:#6c757d;">
+            7 more authors
+          </span>,
+          Shanghang Zhang
 
-        <b>Yuan Zhang</b>,
-        ChunKai Fan, Junpeng Ma,
-        <span class="more-authors"
-              data-short="7 more authors"
-              data-full="Wenzhao Zheng, Tao Huang, Kuan Cheng, Denis Gudovskiy, Tomoyuki Okuno, Yohei Nakata, Kurt Keutzer"
-              onclick="toggleAuthors(this)">
-          7 more authors
-        </span>,
-        Shanghang Zhang
+          <br>
+          <em>ICML 2025</em>
 
-        <br>
-        <em>ICML 2025</em>
+          <p>
+            <a href="https://arxiv.org/pdf/2410.04417" class="btn btn-primary btn-sm">PDF</a>
+            <a href="https://github.com/Gumpest/SparseVLMs" class="btn btn-primary btn-sm">Code</a>
+          </p>
 
-        <div class="pub-links">
-          <a href="#" class="btn btn-primary btn-sm">PDF</a>
-          <a href="#" class="btn btn-primary btn-sm">Code</a>
-        </div>
-      </div>
-
-      <!-- Paper -->
-      <div class="pub-item animate-box"
-           data-animate-effect="fadeInUp"
-           data-category="VLM First-authored">
-
-        <strong>Unveiling the Tapestry of Consistency in Large Vision-Language Models</strong><br>
-
-        <b>Yuan Zhang</b>, Fei Xiao, Tao Huang,
-        <span class="more-authors"
-              data-short="6 more authors"
-              data-full="Chunkai Fan, Hongyuan Dong, Jiawen Li, Jiacong Wang, Kuan Cheng, Shanghang Zhang"
-              onclick="toggleAuthors(this)">
-          6 more authors
-        </span>,
-        Haoyuan Guo
-
-        <br>
-        <em>NeurIPS 2024</em>
-
-        <div class="pub-links">
-          <a href="#" class="btn btn-primary btn-sm">PDF</a>
-          <a href="#" class="btn btn-primary btn-sm">Code</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Manuscripts -->
-    <div class="row" style="margin-top:40px;">
-      <div class="col-md-10 col-md-offset-1 animate-box">
-        <h2 class="colorlib-heading">Manuscripts</h2>
+        </article>
       </div>
     </div>
 
-    <div class="pub-item animate-box" data-animate-effect="fadeInUp">
-      <strong>ChainV: Atomic Visual Hints Make Multimodal Reasoning Shorter and Better</strong><br>
-      <b>Yuan Zhang</b>, Ming Lu, et al.<br>
-      <em>arXiv 2025</em>
+    <!-- Paper 2 -->
+    <div class="row">
+      <div class="col-md-12">
+        <article class="timeline-entry animate-box" data-animate-effect="fadeInUp">
+
+          <strong>Unveiling the Tapestry of Consistency in Large Vision-Language Models</strong><br>
+
+          <b>Yuan Zhang</b>, Fei Xiao, Tao Huang,
+          <span class="more-authors"
+                data-short="6 more authors"
+                data-full="Chunkai Fan, Hongyuan Dong, Jiawen Li, Jiacong Wang, Kuan Cheng, Shanghang Zhang"
+                onclick="toggleAuthors(this)"
+                style="cursor:pointer; color:#6c757d;">
+            6 more authors
+          </span>,
+          Haoyuan Guo
+
+          <br>
+          <em>NeurIPS 2024</em>
+
+          <p>
+            <a href="https://arxiv.org/abs/2405.14156" class="btn btn-primary btn-sm">PDF</a>
+            <a href="https://github.com/foundation-multimodal-models/ConBench" class="btn btn-primary btn-sm">Code</a>
+          </p>
+
+        </article>
+      </div>
     </div>
 
   </div>
 </section>
+
 
 			<section id="work_section" class="colorlib-experience" data-section="work_experience">
 				<div class="colorlib-narrow-content">
