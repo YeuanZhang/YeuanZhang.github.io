@@ -43,37 +43,72 @@
 
 	<meta name="google-site-verification" content="fre-mdt0ZK6U6jTclll30xzKVGpxag9O4dsnsauyOf8" />
 <style>
-  /* 模仿 Evonne Ng 的 News 样式 */
-  .evonne-news-item {
-    display: flex;
-    align-items: flex-start;
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0; /* 淡淡的底部分割线 */
-  }
-  
-  .evonne-date-tag {
-    background-color: #e9f5ff; /* 浅蓝色背景 */
-    color: #007bc1;            /* 深蓝色文字 */
-    font-weight: bold;
-    padding: 2px 8px;
-    font-size: 0.85rem;
-    min-width: 55px;
-    text-align: center;
-    margin-right: 15px;
-    border-radius: 2px;
-  }
 
-  .evonne-news-text {
-    font-size: 0.9rem;
-    color: #444;
-    line-height: 1.6;
-  }
+/* =========================
+   News Section (Evonne-style)
+   ========================= */
 
-  /* 模仿那个“可拖动”感官的侧边线 */
-  .content-wrapper {
-    border-right: 4px solid #d9edf7; /* 放在内容区右侧或左侧 */
-    padding-right: 30px;
-  }
+.news-container {
+  margin-top: 20px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.news-title {
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.news-date {
+  background-color: #eaf4ff;
+  color: #2c7be5;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 3px 8px;
+  min-width: 50px;
+  text-align: center;
+  margin-right: 12px;
+  border-radius: 3px;
+}
+
+.news-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.news-text a {
+  color: #2c7be5;
+  text-decoration: none;
+}
+
+.news-text a:hover {
+  text-decoration: underline;
+}
+
+/* 滚动条优化（可选但推荐） */
+.news-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+  background-color: #cfe3ff;
+  border-radius: 3px;
+}
+
 </style>
 	</head>
 	<body>
@@ -136,24 +171,38 @@
     </p>
 </div>
 
-<div class="row">
-  <div class="large-9 columns content-wrapper">
-    <h3 style="letter-spacing: 2px; border-bottom: 3px solid #008cba; display: inline-block;">N E W S</h3>
-    
-    <div class="evonne-news-item">
-      <div class="evonne-date-tag">2026</div>
-      <div class="evonne-news-text">
-        Our paper <b>SEED</b> is released! Check out the <a href="#">dataset</a>.
-      </div>
-    </div>
+<div class="news-container">
 
-    <div class="evonne-news-item">
-      <div class="evonne-date-tag">2025</div>
-      <div class="evonne-news-text">
-        One paper on <b>FreeKD+</b> is accepted by <b>IEEE TPAMI</b>.
-      </div>
+  <h3 class="news-title">NEWS</h3>
+
+  <div class="news-item">
+    <div class="news-date">2026</div>
+    <div class="news-text">
+      Our paper <b>SEED</b> is released. <a href="#">[dataset]</a>
     </div>
   </div>
+
+  <div class="news-item">
+    <div class="news-date">2025</div>
+    <div class="news-text">
+      1 paper accepted to <b>CVPR</b>.
+    </div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-date">2025</div>
+    <div class="news-text">
+      1 paper accepted to <b>ICML</b>.
+    </div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-date">2024</div>
+    <div class="news-text">
+      1 paper accepted to <b>NeurIPS</b>.
+    </div>
+  </div>
+
 </div>
 									</div>
 								</div>
