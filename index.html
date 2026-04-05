@@ -226,34 +226,47 @@ section[data-section="research"] {
 
 /* 单条经历条目 */
 .experience-item {
-    /* 删除了 flex 布局，因为现在只有单列文字内容 */
     margin-bottom: 25px; 
     padding-bottom: 15px;
+    border-bottom: 1px solid #f2f2f2; /* 可选：增加淡淡的分隔线 */
 }
 
-/* 文字区域 */
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+/* 文字区域宽度自适应 */
 .experience-content {
-    /* flex: 1 也可以保留，但已不再起关键作用 */
     font-size: 14.5px;
     line-height: 1.6;
 }
 
-/* 职位与时间信息 */
+/* 职位与时间信息：核心修复 */
 .experience-info {
+    display: flex;
+    justify-content: space-between; /* 关键：强制左右分布 */
+    align-items: baseline;
+    margin-top: 2px;
     font-style: italic;
     color: #666;
-    display: flex;
-    justify-content: space-between; /* 依然保留：让职位在左，日期在右 */
-    margin-top: 2px;
 }
 
-.experience-info span {
+/* 确保左侧 span 内部没有异常间距 */
+.experience-info span:first-child {
+    flex: 1;
+    text-align: left;
+}
+
+/* 右侧日期样式 */
+.experience-info span:last-child {
     font-style: normal;
     color: #999;
     font-size: 13px;
+    white-space: nowrap; /* 避免日期在窄屏下断行 */
+    margin-left: 20px;
 }
 
-/* 列表缩进优化 */
+/* 列表样式 */
 .experience-content ul {
     margin: 5px 0 0 18px;
     padding: 0;
@@ -266,12 +279,11 @@ section[data-section="research"] {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-    /* 删除了关于 Logo 翻转的 column-reverse 逻辑 */
     .experience-info {
-        flex-direction: column; /* 手机上让职位和日期上下堆叠 */
+        flex-direction: column; /* 手机端改为上下堆叠 */
     }
-    
-    .experience-info span {
+    .experience-info span:last-child {
+        margin-left: 0;
         margin-top: 2px;
     }
 }
@@ -571,12 +583,10 @@ section[data-section="research"] {
           <div class="experience-item">
             <div class="experience-content">
               <strong><a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research Lab (BAIR)</a></strong>, California, USA
-			<div class="experience-info">
-			  <span>
-				Remote Research Intern (Advisor: <a href="https://wzzheng.net/">Wenzhao Zheng</a>)
-			  </span>
-			  <span>Sep. 2024 – Jan. 2025</span>
-			</div>
+              <div class="experience-info">
+                <span>Remote Research Intern (Advisor: <a href="https://wzzheng.net/">Wenzhao Zheng</a>)</span>
+                <span>Sep. 2024 – Jan. 2025</span>
+              </div>
               <ul>
                 <li>Vision Foundation Model.</li>
                 <li>Efficiency in LVLMs and propose <b>SparseVLM</b>.</li>
@@ -588,7 +598,8 @@ section[data-section="research"] {
             <div class="experience-content">
               <strong><a href="https://team.doubao.com/en/">ByteDance Seed Foundation Model</a></strong>, Beijing, China
               <div class="experience-info">
-                Researcher (Advisor: Haoyuan Guo) <span>Jul. 2023 – Jul. 2024</span>
+                <span>Researcher (Advisor: Haoyuan Guo)</span>
+                <span>Jul. 2023 – Jul. 2024</span>
               </div>
               <ul>
                 <li>Vision Foundation Model.</li>
@@ -601,7 +612,8 @@ section[data-section="research"] {
             <div class="experience-content">
               <strong><a href="https://damo.alibaba.com/?lang=en">Alibaba DAMO Academy</a></strong>, Beijing, China
               <div class="experience-info">
-                Research Intern (Advisor: <a href="http://cwhgn.github.io/">Weihua Chen</a>) <span>Jun. 2022 – Feb. 2023</span>
+                <span>Research Intern (Advisor: <a href="http://cwhgn.github.io/">Weihua Chen</a>)</span>
+                <span>Jun. 2022 – Feb. 2023</span>
               </div>
               <ul>
                 <li>Research on knowledge distillation (KD) and propose <b>AvatarKD</b>.</li>
@@ -614,7 +626,8 @@ section[data-section="research"] {
             <div class="experience-content">
               <strong><a href="https://sensetime.com">SenseTime Research</a></strong>, Beijing, China
               <div class="experience-info">
-                Research Intern (Advisor: <a href="https://taohuang.info/">Tao Huang</a>) <span>Mar. 2022 – Jun. 2022</span>
+                <span>Research Intern (Advisor: <a href="https://taohuang.info/">Tao Huang</a>)</span>
+                <span>Mar. 2022 – Jun. 2022</span>
               </div>
               <ul>
                 <li>Research on knowledge distillation (KD) and propose <b>MasKD</b>.</li>
