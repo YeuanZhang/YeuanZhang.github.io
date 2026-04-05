@@ -346,11 +346,11 @@ section[data-section="research"] {
 }
 
 .colorlib-footer ul li a {
-    color: #000 !important; /* 强制设为纯黑 */
-    text-decoration: none;
-    transition: opacity 0.3s;
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important; /* 强制不换行 */
+    color: #000 !important;
+    font-size: 13px !important; /* 略微调小一点点确保能排下一行 */
 }
 
 /* 鼠标悬停时稍微变浅一点，增加交互感 */
@@ -360,10 +360,9 @@ section[data-section="research"] {
 }
 
 .colorlib-footer i {
-    width: 22px;           /* 固定图标宽度，确保文字垂直对齐 */
-    margin-right: 8px;
-    font-size: 16px;
-    color: #000 !important; /* 图标也是黑色 */
+    flex-shrink: 0; /* 确保图标不会被挤压 */
+    margin-right: 10px !important;
+    width: 20px !important;
     text-align: center;
 }
 	
