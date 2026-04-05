@@ -268,6 +268,90 @@ section[data-section="research"] {
     font-weight: 600;
 }
 
+/* --- 11. 左侧边栏专项优化 (Sidebar) --- */
+
+#colorlib-aside {
+    padding-top: 3em;
+    padding-bottom: 40px;
+}
+
+/* 头像名字间距 */
+#colorlib-logo {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#colorlib-logo a {
+    color: #333;
+}
+
+.position {
+    display: block;
+    margin-bottom: 2em;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #888;
+}
+
+/* 导航链接样式 */
+#colorlib-main-menu ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 7px 0;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+#colorlib-main-menu ul li.active a {
+    color: #2c7be5 !important; /* 激活状态变为蓝色 */
+    font-weight: 700;
+}
+
+/* 底部联系方式美化 */
+.colorlib-footer {
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 2em;
+}
+
+.colorlib-footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.colorlib-footer ul li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.colorlib-footer ul li a {
+    color: #666;
+    transition: 0.3s;
+}
+
+.colorlib-footer ul li a:hover {
+    color: #2c7be5;
+    text-decoration: none;
+}
+
+.colorlib-footer i {
+    width: 20px; /* 固定图标宽度，确保文字对齐 */
+    margin-right: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* 针对 Google Scholar 可能没有 FontAwesome 图标的补丁 */
+.fa-google-scholar:before {
+    content: "\f19d"; /* 使用毕业帽图标代替 */
+}
+
 /* --- 6. 响应式适配 --- */
 @media (max-width: 768px) {
 	section {
