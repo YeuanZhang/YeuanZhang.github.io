@@ -59,17 +59,17 @@
     margin-bottom: 15px;
 }
 
-/* --- 2. 统一正文字体 (核心修复点) --- */
-/* 确保自我介绍、实习经历描述、新闻文字的大小和行高完全一致 */
+/* --- 2. 统一正文字体 (解决上下字体不一) --- */
 .about-desc p, 
 .experience-content, 
-.news-text {
+.news-text,
+.pub-item {
     font-size: 15px !important;
     color: #555;
-    line-height: 1.7; /* 统一行高，平衡美感与易读性 */
+    line-height: 1.7;
 }
 
-/* --- 3. 新闻板块 (News Section) --- */
+/* --- 3. 新闻板块 (News) --- */
 .news-container {
     margin-top: 20px;
     max-height: 140px;
@@ -96,15 +96,6 @@
     border-radius: 3px;
 }
 
-.news-container::-webkit-scrollbar {
-    width: 6px;
-}
-
-.news-container::-webkit-scrollbar-thumb {
-    background-color: #cfe3ff;
-    border-radius: 3px;
-}
-
 /* --- 4. 实习经历板块 (Research Experience) --- */
 .experience-container {
     margin-top: 10px;
@@ -116,11 +107,8 @@
     border-bottom: 1px solid #f2f2f2;
 }
 
-.experience-item:last-child {
-    border-bottom: none;
-}
+.experience-item:last-child { border-bottom: none; }
 
-/* 职位与导师信息：解决超链接空格问题的关键 */
 .experience-info {
     display: flex;
     justify-content: space-between;
@@ -130,24 +118,11 @@
     color: #666;
 }
 
-/* 强制左侧文字紧凑排列 */
 .experience-info span:first-child {
     flex: 1;
     text-align: left;
 }
 
-/* 导师超链接去蓝及去多余间距 */
-.experience-info a {
-    color: #2c7be5;
-    text-decoration: none;
-    display: inline; /* 必须是 inline */
-}
-
-.experience-info a:hover {
-    text-decoration: underline;
-}
-
-/* 右侧日期样式 */
 .experience-info span:last-child {
     font-style: normal;
     color: #999;
@@ -156,7 +131,6 @@
     margin-left: 20px;
 }
 
-/* 经历中的列表优化 */
 .experience-content ul {
     margin: 8px 0 0 18px;
     padding: 0;
@@ -179,7 +153,25 @@
     background: #f9fafc;
 }
 
-/* 论文按钮样式（强制覆盖 Bootstrap） */
+/* 修复 C1, C2 编号小方块样式 */
+.pub-id {
+    background-color: #eaf4ff;
+    color: #2c7be5;
+    font-weight: 700;
+    font-size: 11px;
+    display: inline-block;
+    padding: 2px 8px;
+    min-width: 35px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 12px;
+    vertical-align: middle;
+    line-height: 1.4;
+    position: relative;
+    top: -1px;
+}
+
+/* 论文中的链接按钮 */
 .btn-primary.btn-sm {
     background-color: #ffffff !important;
     color: #555555 !important;
@@ -188,10 +180,9 @@
     font-size: 11.5px !important;
     border-radius: 4px !important;
     box-shadow: none !important;
-    font-weight: 400 !important;
     text-transform: none;
-    transition: all 0.2s ease;
     margin-right: 6px;
+    transition: all 0.2s ease;
 }
 
 .btn-primary.btn-sm:hover {
@@ -200,19 +191,7 @@
     color: #2c7be5 !important;
 }
 
-/* --- 6. 间距补丁 (Section Spacing) --- */
-section[data-section="about"],
-section[data-section="research"] {
-    padding-top: 1.5em;
-    padding-bottom: 1em;
-}
-
-section[data-section="news"] {
-    padding-top: 0.5em;
-    padding-bottom: 1em;
-}
-
-/* --- 7. 响应式适配 --- */
+/* --- 6. 响应式适配 --- */
 @media (max-width: 768px) {
     .experience-info {
         flex-direction: column;
@@ -221,11 +200,7 @@ section[data-section="news"] {
         margin-left: 0;
         margin-top: 4px;
     }
-    .about-desc p {
-        font-size: 14px !important; /* 手机端稍微减小字号以适应屏幕 */
-    }
 }
-
 </style>
 	</head>
 	<body>
