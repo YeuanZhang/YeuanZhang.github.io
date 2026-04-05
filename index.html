@@ -43,218 +43,108 @@
 
 	<meta name="google-site-verification" content="fre-mdt0ZK6U6jTclll30xzKVGpxag9O4dsnsauyOf8" />
 <style>
-
-.news-container {
-  margin-top: 20px;
-  max-height: 140px;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-
-.news-title {
-  letter-spacing: 4px;
-  font-size: 16px;
-  font-weight: 600;
-  border-bottom: 2px solid #4a90e2;
-  display: inline-block;
-  padding-bottom: 4px;
-  margin-bottom: 15px;
-}
-
-.news-item {
-  display: flex;
-  align-items: flex-start;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.news-date {
-  background-color: #eaf4ff;
-  color: #2c7be5;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 3px 8px;
-  min-width: 50px;
-  text-align: center;
-  margin-right: 12px;
-  border-radius: 3px;
-}
-
-.news-text {
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.news-text a {
-  color: #2c7be5;
-  text-decoration: none;
-}
-
-.news-text a:hover {
-  text-decoration: underline;
-}
-
-.news-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.news-container::-webkit-scrollbar-thumb {
-  background-color: #cfe3ff;
-  border-radius: 3px;
-}
-
+/* --- 1. 全局基础与标题样式 --- */
 .colorlib-heading {
-  margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .heading-meta {
-  font-size: 13px !important;
-  letter-spacing: 2px;
-  font-weight: 600;
-  color: #666;
-
-  display: inline-block;                 /* 关键 */
-  border-bottom: 2px solid #4a90e2;      /* 蓝色下划线 */
-  padding-bottom: 3px;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #666;
+    display: inline-block;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
 }
 
-.about-desc p {
-  line-height: 1.8;        /* 核心：控制行间距 */
-  margin-top: 0px;         /* 去掉默认上间距 */
-  margin-bottom: 18px;     /* 控制段落间距 */
-  font-size: 15px;         /* 可选：更接近她 */
-  color: #555;             /* 可选：更柔和 */
-}
-	
-.pub-item {
-  margin-bottom: 28px;
-  padding: 16px 18px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
+/* --- 2. 统一正文字体 (核心修复点) --- */
+/* 确保自我介绍、实习经历描述、新闻文字的大小和行高完全一致 */
+.about-desc p, 
+.experience-content, 
+.news-text {
+    font-size: 15px !important;
+    color: #555;
+    line-height: 1.7; /* 统一行高，平衡美感与易读性 */
 }
 
-.pub-item:hover {
-  background: #f9fafc;
+/* --- 3. 新闻板块 (News Section) --- */
+.news-container {
+    margin-top: 20px;
+    max-height: 140px;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-.pub-links {
-  margin-top: 6px;
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.filter {
-  margin-right: 8px;
-  padding: 5px 12px;
-  border: 1px solid #ccc;
-  background: white;
-  cursor: pointer;
-  border-radius: 6px;
+.news-date {
+    background-color: #eaf4ff;
+    color: #2c7be5;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 3px 8px;
+    min-width: 55px;
+    text-align: center;
+    margin-right: 12px;
+    border-radius: 3px;
 }
 
-.filter:hover {
-  background: #f0f0f0;
+.news-container::-webkit-scrollbar {
+    width: 6px;
 }
 
-.pub-id {
-  background-color: #eaf4ff;
-  color: #2c7be5;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 3px 8px;
-  min-width: 50px;
-  text-align: center;
-  margin-right: 12px;
-  border-radius: 3px;
+.news-container::-webkit-scrollbar-thumb {
+    background-color: #cfe3ff;
+    border-radius: 3px;
 }
 
-/* 覆盖 Bootstrap 的 btn-primary 和 btn-sm 样式 */
-.btn-primary.btn-sm {
-  /* 基础形状与颜色 */
-  background-color: #ffffff !important; /* 强制背景为白 */
-  color: #555555 !important;            /* 文字改为深灰色 */
-  border: 1px solid #e0e0e0 !important; /* 浅灰色细边框 */
-  
-  /* 尺寸微调 */
-  padding: 2px 10px !important;
-  font-size: 11px !important;
-  border-radius: 4px !important;        /* 减小圆角，更硬朗 */
-  
-  /* 去除 Bootstrap 自带的效果 */
-  box-shadow: none !important;          /* 去除阴影 */
-  font-weight: 400 !important;          /* 字体不需要加粗 */
-  text-transform: none;                 /* 确保文字大小写正常 */
-}
-
-/* 悬停状态：让它看起来像个按钮 */
-.btn-primary.btn-sm:hover {
-  background-color: #f8f9fa !important; /* 极浅灰背景 */
-  border-color: #cccccc !important;     /* 边框稍微加深 */
-  color: #333333 !important;            /* 文字稍微加深 */
-}
-
-.paper-links {
-	display: flex;
-	gap: 6px;      /* 按钮之间的间距 */
-	margin-top: 8px;
-}
-
-.timeline-entry {
-    margin-bottom: 15px !important; /* 根据需要调整数值，建议 40px - 60px 之间 */
-}
-
-/* Biography section */
-section[data-section="about"] {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-/* News section */
-section[data-section="news"] {
-    padding-top: 0.5em;
-    padding-bottom: 1em;
-}
-
-/* Research section */
-section[data-section="research"] {
-    padding-top: 1em;
-}
-
-/* 实习经历容器 */
+/* --- 4. 实习经历板块 (Research Experience) --- */
 .experience-container {
     margin-top: 10px;
 }
 
-/* 单条经历条目 */
 .experience-item {
     margin-bottom: 25px; 
     padding-bottom: 15px;
-    border-bottom: 1px solid #f2f2f2; /* 可选：增加淡淡的分隔线 */
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .experience-item:last-child {
     border-bottom: none;
 }
 
-/* 文字区域宽度自适应 */
-.experience-content {
-    font-size: 14.5px;
-    line-height: 1.6;
-}
-
-/* 职位与时间信息：核心修复 */
+/* 职位与导师信息：解决超链接空格问题的关键 */
 .experience-info {
     display: flex;
-    justify-content: space-between; /* 关键：强制左右分布 */
+    justify-content: space-between;
     align-items: baseline;
-    margin-top: 2px;
+    margin-top: 4px;
     font-style: italic;
     color: #666;
 }
 
-/* 确保左侧 span 内部没有异常间距 */
+/* 强制左侧文字紧凑排列 */
 .experience-info span:first-child {
     flex: 1;
     text-align: left;
+}
+
+/* 导师超链接去蓝及去多余间距 */
+.experience-info a {
+    color: #2c7be5;
+    text-decoration: none;
+    display: inline; /* 必须是 inline */
+}
+
+.experience-info a:hover {
+    text-decoration: underline;
 }
 
 /* 右侧日期样式 */
@@ -262,31 +152,78 @@ section[data-section="research"] {
     font-style: normal;
     color: #999;
     font-size: 13px;
-    white-space: nowrap; /* 避免日期在窄屏下断行 */
+    white-space: nowrap;
     margin-left: 20px;
 }
 
-/* 列表样式 */
+/* 经历中的列表优化 */
 .experience-content ul {
-    margin: 5px 0 0 18px;
+    margin: 8px 0 0 18px;
     padding: 0;
 }
 
 .experience-content ul li {
-    margin-top: 3px;
+    margin-top: 4px;
     list-style-type: disc;
 }
 
-/* 移动端适配 */
+/* --- 5. 论文发表板块 (Publications) --- */
+.pub-item {
+    margin-bottom: 28px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.pub-item:hover {
+    background: #f9fafc;
+}
+
+/* 论文按钮样式（强制覆盖 Bootstrap） */
+.btn-primary.btn-sm {
+    background-color: #ffffff !important;
+    color: #555555 !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 2px 10px !important;
+    font-size: 11.5px !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-weight: 400 !important;
+    text-transform: none;
+    transition: all 0.2s ease;
+    margin-right: 6px;
+}
+
+.btn-primary.btn-sm:hover {
+    background-color: #f8f9fa !important;
+    border-color: #2c7be5 !important;
+    color: #2c7be5 !important;
+}
+
+/* --- 6. 间距补丁 (Section Spacing) --- */
+section[data-section="about"],
+section[data-section="research"] {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+section[data-section="news"] {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+/* --- 7. 响应式适配 --- */
 @media (max-width: 768px) {
     .experience-info {
-        flex-direction: column; /* 手机端改为上下堆叠 */
+        flex-direction: column;
     }
     .experience-info span:last-child {
         margin-left: 0;
-        margin-top: 2px;
+        margin-top: 4px;
     }
-}
+    .about-desc p {
+        font-size: 14px !important; /* 手机端稍微减小字号以适应屏幕 */
+    }
 }
 
 </style>
