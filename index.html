@@ -226,16 +226,14 @@ section[data-section="research"] {
 
 /* 单条经历条目 */
 .experience-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 25px; /* 控制两条实习之间的距离 */
+    /* 删除了 flex 布局，因为现在只有单列文字内容 */
+    margin-bottom: 25px; 
     padding-bottom: 15px;
 }
 
 /* 文字区域 */
 .experience-content {
-    flex: 1;
+    /* flex: 1 也可以保留，但已不再起关键作用 */
     font-size: 14.5px;
     line-height: 1.6;
 }
@@ -245,7 +243,7 @@ section[data-section="research"] {
     font-style: italic;
     color: #666;
     display: flex;
-    justify-content: space-between; /* 让职位在左，日期在右 */
+    justify-content: space-between; /* 依然保留：让职位在左，日期在右 */
     margin-top: 2px;
 }
 
@@ -266,31 +264,17 @@ section[data-section="research"] {
     list-style-type: disc;
 }
 
-/* Logo 区域 */
-.experience-logo {
-    margin-left: 20px;
-    min-width: 120px;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 /* 移动端适配 */
 @media (max-width: 768px) {
-    .experience-item {
-        flex-direction: column-reverse; /* 手机上 Logo 放在上方或隐藏 */
-    }
-    .experience-logo {
-        margin-left: 0;
-        margin-bottom: 10px;
-        justify-content: flex-start;
-    }
+    /* 删除了关于 Logo 翻转的 column-reverse 逻辑 */
     .experience-info {
-        flex-direction: column;
+        flex-direction: column; /* 手机上让职位和日期上下堆叠 */
+    }
+    
+    .experience-info span {
+        margin-top: 2px;
     }
 }
-
 }
 
 </style>
@@ -595,9 +579,6 @@ section[data-section="research"] {
                 <li>Efficiency in LVLMs and propose <b>SparseVLM</b>.</li>
               </ul>
             </div>
-            <div class="experience-logo">
-              <img src="fig/BAIR_Logo_BlueType_Tag.png" style="width: 90px;">
-            </div>
           </div>
 
           <div class="experience-item">
@@ -610,9 +591,6 @@ section[data-section="research"] {
                 <li>Vision Foundation Model.</li>
                 <li>Research on Consistency in LVLMs and propose <a href="#">ConBench</a>.</li>
               </ul>
-            </div>
-            <div class="experience-logo">
-              <img src="fig/bytedance.png" style="width: 90px;">
             </div>
           </div>
 
@@ -627,9 +605,6 @@ section[data-section="research"] {
                 <li>Distill for DAMO-YOLO.</li>
               </ul>
             </div>
-            <div class="experience-logo">
-              <img src="fig/DAMO.png" style="width: 100px;">
-            </div>
           </div>
 
           <div class="experience-item">
@@ -642,9 +617,6 @@ section[data-section="research"] {
                 <li>Research on knowledge distillation (KD) and propose <b>MasKD</b>.</li>
                 <li>Develop on MMRazor.</li>
               </ul>
-            </div>
-            <div class="experience-logo">
-              <img src="fig/sensetime.png" style="width: 110px;">
             </div>
           </div>
 
