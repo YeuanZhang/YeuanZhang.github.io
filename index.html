@@ -320,42 +320,48 @@ section[data-section="research"] {
     font-weight: 700;
 }
 
-/* 底部联系方式美化 */
+/* --- 11. 左侧边栏底部联系方式 (纯黑简约版) --- */
+
 .colorlib-footer {
     padding-left: 30px;
-    padding-right: 20px;
     margin-top: 2em;
 }
 
 .colorlib-footer ul {
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
 .colorlib-footer ul li {
-    margin-bottom: 8px;
-    font-size: 13px;
+    display: block;        /* 确保每一项占满一行 */
+    margin-bottom: 12px;   /* 行与行之间的间距 */
+    font-size: 13.5px;
+    line-height: 1.2;
+}
+
+.colorlib-footer ul li a {
+    color: #000 !important; /* 强制设为纯黑 */
+    text-decoration: none;
+    transition: opacity 0.3s;
     display: flex;
     align-items: center;
 }
 
-.colorlib-footer ul li a {
-    color: #666;
-    transition: 0.3s;
-}
-
+/* 鼠标悬停时稍微变浅一点，增加交互感 */
 .colorlib-footer ul li a:hover {
-    color: #2c7be5;
-    text-decoration: none;
+    opacity: 0.6;
+    color: #000 !important;
 }
 
 .colorlib-footer i {
-    width: 20px; /* 固定图标宽度，确保文字对齐 */
-    margin-right: 10px;
+    width: 22px;           /* 固定图标宽度，确保文字垂直对齐 */
+    margin-right: 8px;
     font-size: 16px;
-    color: #444;
+    color: #000 !important; /* 图标也是黑色 */
+    text-align: center;
 }
-
+	
 /* 针对 Google Scholar 可能没有 FontAwesome 图标的补丁 */
 .fa-google-scholar:before {
     content: "\f19d"; /* 使用毕业帽图标代替 */
@@ -405,25 +411,25 @@ section[data-section="research"] {
         </div>
     </nav>
 
-    <div class="colorlib-footer">
-        <ul>
-            <li>
-                <a href="https://scholar.google.com/citations?user=dXj1WskAAAAJ&hl=en" target="_blank">
-                    <i class="fa fa-google-scholar"></i> Google Scholar
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Gumpest" target="_blank">
-                    <i class="fa fa-github"></i> GitHub
-                </a>
-            </li>
-            <li>
-                <a href="mailto:zhangyuan@stu.pku.edu.cn">
-                    <i class="fa fa-envelope"></i> zhangyuan [at] pku.edu.cn
-                </a>
-            </li>
-        </ul>
-    </div>
+<div class="colorlib-footer">
+    <ul>
+        <li>
+            <a href="https://scholar.google.com/citations?user=dXj1WskAAAAJ&hl=en" target="_blank">
+                <i class="fa fa-google-plus-official"></i> Google Scholar
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Gumpest" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+            </a>
+        </li>
+        <li>
+            <a href="mailto:zhangyuan@alumni.pku.edu.cn">
+                <i class="fa fa-envelope"></i> zhangyuan [at] alumni.pku.edu.cn
+            </a>
+        </li>
+    </ul>
+</div>
 </aside>
 
 <div id="colorlib-main">
