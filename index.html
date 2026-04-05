@@ -49,7 +49,7 @@
 }
 
 .heading-meta {
-    font-size: 13px !important;
+    font-size: 14px !important;
     letter-spacing: 2px;
     font-weight: 600;
     color: #666;
@@ -73,13 +73,13 @@
 .pub-item, 
 .experience-content, 
 .experience-info span:first-child {
-    font-size: 15px !important; /* 调整为一个中间值，既不显得太大也不显得太小 */
+    font-size: 15.5px !important; /* 调整为一个中间值，既不显得太大也不显得太小 */
     font-family: inherit;         /* 确保字体库一致 */
 }
 
 /* 针对导师超链接的字号加固 */
 .experience-info a {
-    font-size: 15px !important;
+    font-size: 15.5px !important;
 }
 	
 /* --- 3. 新闻板块 (News) --- */
@@ -204,8 +204,15 @@
     color: #2c7be5 !important;
 }
 
+section {
+    padding: 1.0em 0; /* 这里的 0 是左右间距，上下为 1.0em */
+}
+
 /* --- 6. 响应式适配 --- */
 @media (max-width: 768px) {
+	section {
+	        padding: 0.6em 0; /* 手机端间距稍微收紧，更紧凑 */
+	    }
     .experience-info {
         flex-direction: column;
     }
