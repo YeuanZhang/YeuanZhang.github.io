@@ -275,15 +275,24 @@ section[data-section="research"] {
     padding-bottom: 40px;
 }
 
-/* 头像名字间距 */
+/* --- 11. 左侧边栏名字样式 (还原版) --- */
 #colorlib-logo {
     margin-bottom: 0.5em;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 24px;
+    text-transform: none;      /* 确保不会被强制大写 */
+    letter-spacing: 0;         /* 还原字间距 */
+    font-family: "Playfair Display", Georgia, serif; /* 恢复模板默认的优雅字体 */
 }
 
 #colorlib-logo a {
-    color: #333;
+    color: #000;               /* 恢复纯黑色 */
+    transition: 0.3s;
+}
+
+#colorlib-logo a:hover {
+    color: #2c7be5;            /* 悬停时保留一点交互感 */
+    text-decoration: none;
 }
 
 .position {
