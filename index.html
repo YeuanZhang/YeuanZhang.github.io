@@ -193,7 +193,7 @@ section[data-section="research"] {
   
   /* 尺寸微调 */
   padding: 2px 10px !important;
-  font-size: 13px !important;
+  font-size: 10px !important;
   border-radius: 4px !important;        /* 减小圆角，更硬朗 */
   
   /* 去除 Bootstrap 自带的效果 */
@@ -207,6 +207,12 @@ section[data-section="research"] {
   background-color: #f8f9fa !important; /* 极浅灰背景 */
   border-color: #cccccc !important;     /* 边框稍微加深 */
   color: #333333 !important;            /* 文字稍微加深 */
+}
+
+.paper-links {
+	display: flex;
+	gap: 6px;      /* 按钮之间的间距 */
+	margin-top: 8px;
 }
 
 }
@@ -330,7 +336,6 @@ section[data-section="research"] {
 <section id="research_section" class="colorlib-experience" data-section="research">
   <div class="colorlib-narrow-content">
 
-    <!-- 标题（单独动画） -->
     <div class="row">
       <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
         <span class="heading-meta">Selected Publications</span>
@@ -344,13 +349,13 @@ section[data-section="research"] {
 
           <strong><span class="pub-id">C1</span>SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference</strong><br>
 
-          <b>Yuan Zhang</b>, ChunKai Fan, Junpeng Ma,
+          <b>Yuan Zhang</b>, ChunKai Fan, Junpeng Ma, Wenzhao Zheng,
           <span class="more-authors"
-                data-short="7 more authors"
-                data-full="Wenzhao Zheng, Tao Huang, Kuan Cheng, Denis Gudovskiy, Tomoyuki Okuno, Yohei Nakata, Kurt Keutzer"
+                data-short="6 more authors"
+                data-full="Tao Huang, Kuan Cheng, Denis Gudovskiy, Tomoyuki Okuno, Yohei Nakata, Kurt Keutzer"
                 onclick="toggleAuthors(this)"
                 style="cursor:pointer; color:#6c757d;">
-            7 more authors
+            6 more authors
           </span>,
           Shanghang Zhang
 
@@ -360,15 +365,9 @@ section[data-section="research"] {
 		<p class="paper-links">
 		  <a href="https://arxiv.org/pdf/2410.04417" class="btn btn-primary btn-sm">PDF</a>
 		  <a href="https://github.com/Gumpest/SparseVLMs" class="btn btn-primary btn-sm">Code</a>
+		  <a href="https://news.panasonic.com/global/zh-CHS/press/en250704-2" class="btn btn-primary btn-sm">Panasonic Press</a>
 		</p>
-		
-		<style>
-		  .paper-links {
-		    display: flex;
-		    gap: 6px;      /* 按钮之间的间距 */
-		    margin-top: 8px;
-		  }
-		</style>
+
 
         </article>
       </div>
