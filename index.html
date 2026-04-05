@@ -227,6 +227,42 @@ section[data-section="research"] {
     padding-bottom: 0.8em;
 }
 
+/* --- 7. 学术服务板块 (Academic Services) --- */
+.services-container {
+    margin-top: 10px;
+}
+
+.services-item {
+    margin-bottom: 20px;
+}
+
+/* 统一字号为 15px，与正文对齐 */
+.services-item strong {
+    font-size: 15px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.services-item ul {
+    margin: 0 0 0 18px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.services-item ul li {
+    font-size: 14.5px; /* 列表内容稍微小一点点，显得有层次感 */
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 4px;
+}
+
+/* 强调会议简称的颜色，可以微调为蓝色，呼应整体色调 */
+.services-item b {
+    color: #333;
+    font-weight: 600;
+}
+
 /* --- 6. 响应式适配 --- */
 @media (max-width: 768px) {
 	section {
@@ -593,46 +629,42 @@ section[data-section="research"] {
   </div>
 </section>
 
-			<!-- <section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-mail"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>evonne underscore ng at berkeley dot edu</p>
-								</div>
-							</div> -->
+<section class="colorlib-about" data-section="services">
+  <div class="colorlib-narrow-content">
+    <div class="row animate-box" data-animate-effect="fadeInLeft">
+      <div class="col-md-12">
+        <span class="heading-meta">Academic Services</span>
 
-							<!-- <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-social-linkedin"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="https://www.linkedin.com/in/evonnengineer/" target="_blank">evonnengineer</a></p>
-								</div>
-							</div> -->
+        <div class="services-container">
+          <div class="services-item">
+            <strong>Reviewer for Conferences:</strong>
+            <ul>
+              <li>
+                <b>CVPR</b> 2024 | <b>ECCV</b> 2024 | <b>ACM MM</b> 2024 | <b>NeurIPS</b> 2024
+              </li>
+              <li>
+                <b>ICLR</b> 2025 | <b>AISTATS</b> 2025 | <b>CVPR</b> 2025 | <b>ICML</b> 2025 | <b>ICCV</b> 2025 | <b>NeurIPS</b> 2025
+              </li>
+              <li>
+                <b>WACV</b> 2026 | <b>AAAI</b> 2026 | <b>AISTATS</b> 2026 | <b>ICLR</b> 2026 | <b>CVPR</b> 2026 | <b>ICML</b> 2026
+              </li>
+            </ul>
+          </div>
 
-							<!-- <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-social-github"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="https://github.com/evonneng" target="_blank">evonneng</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
+          <div class="services-item">
+            <strong>Reviewer for Journals:</strong>
+            <ul>
+              <li>
+                <b>IJCV</b> | <b>T-IP</b> | <b>T-MLR</b> | <b>T-MM</b> | <b>T-CSVT</b> | <b>T-NNLS</b>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 			<section class="colorlib-work" data-section="hobbies">
 				<div class="colorlib-narrow-content">
