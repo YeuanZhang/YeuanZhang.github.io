@@ -204,8 +204,27 @@
     color: #2c7be5 !important;
 }
 
-section {
-    padding: 0.6em 0; /* 这里的 0 是左右间距，上下为 1.0em */
+/* --- 6. 各板块间距微调 (更紧凑版) --- */
+
+/* Biography / About Me */
+section[data-section="about"] {
+    padding-top: 1.0em;    /* 缩小顶部留白 */
+    padding-bottom: 0.5em; /* 缩小底部留白，紧贴 News */
+}
+
+/* News Section */
+section[data-section="news"] {
+    padding-top: 0.5em; 
+    padding-bottom: 0.8em;
+}
+
+/* Research & Experience & Publications */
+/* 这些板块通常内容较多，保持适中的顶部间距即可 */
+section[data-section="experience"],
+section[data-section="publications"],
+section[data-section="research"] {
+    padding-top: 0.8em; 
+    padding-bottom: 0.8em;
 }
 
 /* --- 6. 响应式适配 --- */
