@@ -219,6 +219,78 @@ section[data-section="research"] {
     padding-top: 1em;
 }
 
+/* 实习经历容器 */
+.experience-container {
+    margin-top: 10px;
+}
+
+/* 单条经历条目 */
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px; /* 控制两条实习之间的距离 */
+    padding-bottom: 15px;
+}
+
+/* 文字区域 */
+.experience-content {
+    flex: 1;
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+/* 职位与时间信息 */
+.experience-info {
+    font-style: italic;
+    color: #666;
+    display: flex;
+    justify-content: space-between; /* 让职位在左，日期在右 */
+    margin-top: 2px;
+}
+
+.experience-info span {
+    font-style: normal;
+    color: #999;
+    font-size: 13px;
+}
+
+/* 列表缩进优化 */
+.experience-content ul {
+    margin: 5px 0 0 18px;
+    padding: 0;
+}
+
+.experience-content ul li {
+    margin-top: 3px;
+    list-style-type: disc;
+}
+
+/* Logo 区域 */
+.experience-logo {
+    margin-left: 20px;
+    min-width: 120px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column-reverse; /* 手机上 Logo 放在上方或隐藏 */
+    }
+    .experience-logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+    }
+    .experience-info {
+        flex-direction: column;
+    }
+}
+
 }
 
 </style>
@@ -504,21 +576,83 @@ section[data-section="research"] {
 </section>
 
 
-			<section id="work_section" class="colorlib-experience" data-section="work_experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Work Experience</span>
-							<h2 class="colorlib-heading animate-box">Internships and Research Positions</h2>
-						</div>
-					</div>
-					<div class="row" data-animate-effect="fadeInRight">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<span><img style="width: 100%" src="images/webpage_jobs.jpg"></span>
-						</div>
-				   </div>
-				</div>
-			</section>
+<section class="colorlib-about" data-section="experience">
+  <div class="colorlib-narrow-content">
+    <div class="row animate-box" data-animate-effect="fadeInLeft">
+      <div class="col-md-12">
+        <span class="heading-meta">Research Experience</span>
+        
+        <div class="experience-container">
+
+          <div class="experience-item">
+            <div class="experience-content">
+              <strong><a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research Lab (BAIR)</a></strong>, California, USA
+              <div class="experience-info">
+                Remote Research Intern (Advisor: <a href="https://wzzheng.net/">Wenzhao Zheng</a>) <span>Sep. 2024 – Dec. 2024</span>
+              </div>
+              <ul>
+                <li>Vision Foundation Model.</li>
+                <li>Efficiency in LVLMs and propose <b>SparseVLM</b>.</li>
+              </ul>
+            </div>
+            <div class="experience-logo">
+              <img src="fig/BAIR_Logo_BlueType_Tag.png" style="width: 90px;">
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-content">
+              <strong><a href="https://team.doubao.com/en/">ByteDance Seed Foundation Model</a></strong>, Beijing, China
+              <div class="experience-info">
+                (S1) Researcher (Advisor: Haoyuan Guo); (S2) Intern (Advisor: Ming Lu) <span>Jul. 2023 – Jul. 2024, Jan. 2025 – Now</span>
+              </div>
+              <ul>
+                <li>Vision Foundation Model.</li>
+                <li>Research on Consistency in LVLMs and propose <a href="#">ConBench</a>.</li>
+              </ul>
+            </div>
+            <div class="experience-logo">
+              <img src="fig/bytedance.png" style="width: 90px;">
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-content">
+              <strong><a href="https://damo.alibaba.com/?lang=en">Alibaba DAMO Academy</a></strong>, Beijing, China
+              <div class="experience-info">
+                Research Intern (Advisor: <a href="http://cwhgn.github.io/">Weihua Chen</a>) <span>Jun. 2022 – Feb. 2023</span>
+              </div>
+              <ul>
+                <li>Research on knowledge distillation (KD) and propose <b>AvatarKD</b>.</li>
+                <li>Distill for DAMO-YOLO.</li>
+              </ul>
+            </div>
+            <div class="experience-logo">
+              <img src="fig/DAMO.png" style="width: 100px;">
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-content">
+              <strong><a href="https://sensetime.com">SenseTime Research</a></strong>, Beijing, China
+              <div class="experience-info">
+                Research Intern (Advisor: <a href="https://taohuang.info/">Tao Huang</a>) <span>Mar. 2022 – Jun. 2022</span>
+              </div>
+              <ul>
+                <li>Research on knowledge distillation (KD) and propose <b>MasKD</b>.</li>
+                <li>Develop on MMRazor.</li>
+              </ul>
+            </div>
+            <div class="experience-logo">
+              <img src="fig/sensetime.png" style="width: 110px;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 			<!-- <section class="colorlib-contact" data-section="contact">
 				<div class="colorlib-narrow-content">
